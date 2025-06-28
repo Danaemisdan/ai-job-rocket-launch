@@ -1,12 +1,24 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import Header from "@/components/landing/Header";
+import HeroSection from "@/components/landing/HeroSection";
+import FeaturesSection from "@/components/landing/FeaturesSection";
+import TestimonialSection from "@/components/landing/TestimonialSection";
+import FinalCTASection from "@/components/landing/FinalCTASection";
+import Footer from "@/components/landing/Footer";
+import FloatingBlobs from "@/components/landing/FloatingBlobs";
+import MobileStickyCTA from "@/components/landing/MobileStickyCTA";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-white font-inter relative overflow-hidden">
+      <FloatingBlobs />
+      <Header />
+      <HeroSection />
+      <FeaturesSection />
+      <TestimonialSection />
+      <FinalCTASection />
+      <Footer />
+      <MobileStickyCTA />
     </div>
   );
 };
