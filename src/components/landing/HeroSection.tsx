@@ -6,10 +6,10 @@ const HeroSection = () => {
   return (
     <section className="min-h-screen flex items-center justify-center px-4 pt-20 relative">
       <div className="text-center max-w-4xl mx-auto animate-fade-in">
-        {/* Main Headline */}
+        {/* Main Headline - SEO Optimized */}
         <h1 className="text-5xl md:text-7xl font-bold text-deep-black mb-6 leading-tight">
-          Apply to <span className="text-primary">100s of Jobs</span><br />
-          in One Click
+          Apply to <span className="text-primary">100s of Jobs</span> Instantly<br />
+          <span className="text-3xl md:text-4xl text-muted-text">Job Automation Bot | AI Job Finder</span>
         </h1>
 
         {/* Subheadline */}

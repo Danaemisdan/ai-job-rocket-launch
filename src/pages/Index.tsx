@@ -7,6 +7,7 @@ import FinalCTASection from "@/components/landing/FinalCTASection";
 import Footer from "@/components/landing/Footer";
 import FloatingBlobs from "@/components/landing/FloatingBlobs";
 import MobileStickyCTA from "@/components/landing/MobileStickyCTA";
+import SEOTextSection from "@/components/landing/SEOTextSection";
 
 const Index = () => {
   return (
@@ -17,6 +18,7 @@ const Index = () => {
       <FeaturesSection />
       <TestimonialSection />
       <FinalCTASection />
+      <SEOTextSection />
       <Footer />
       <MobileStickyCTA />
     </div>
