@@ -1,13 +1,7 @@
 
 const FloatingBlobs = () => {
   return (
-    <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
-      {/* Blue Blob */}
-      <div 
-        className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-float"
-        style={{ animationDelay: '0s' }}
-      />
-      
+    <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">      
       {/* Green Blob */}
       <div 
         className="absolute top-3/4 right-1/4 w-80 h-80 bg-success/10 rounded-full blur-3xl animate-float"
