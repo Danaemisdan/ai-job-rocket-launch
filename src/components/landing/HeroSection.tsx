@@ -5,7 +5,7 @@ const HeroSection = () => {
       <div className="text-center max-w-4xl mx-auto animate-fade-in">
         {/* Main Headline - SEO Optimized */}
         <h1 className="text-5xl md:text-7xl font-bold text-deep-black mb-6 leading-tight">
-          Apply to <span className="text-primary">100s of Jobs</span> Instantly<br />
+          Apply to <span className="text-primary">1000s of Jobs</span> Instantly<br />
           <span className="text-3xl md:text-4xl text-muted-text"></span>
         </h1>
 
