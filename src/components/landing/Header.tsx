@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Mail, Linkedin } from "lucide-react";
+import { Mail, Linkedin, Menu } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const Header = () => {
