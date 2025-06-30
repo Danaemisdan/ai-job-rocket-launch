@@ -1,7 +1,9 @@
 
 import { Mail, Linkedin } from "lucide-react";
+
 const Footer = () => {
-  return <footer className="bg-footer-bg py-12 px-4">
+  return (
+    <footer className="bg-footer-bg py-12 px-4">
       <div className="container mx-auto max-w-6xl">
         {/* Main Footer Content */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
@@ -28,18 +30,22 @@ const Footer = () => {
 
         {/* Footer Links */}
         <div className="flex flex-wrap justify-center md:justify-start gap-6 mb-8 text-sm">
-          <a href="/privacypolicy" className="text-muted-text hover:text-primary transition-colors">Privacy Policy</a>
-          <a href="/terms" className="text-muted-text hover:text-primary transition-colors">Terms of Service</a>
           <a href="#contact" className="text-muted-text hover:text-primary transition-colors">Contact</a>
           <a href="/signin" className="text-muted-text hover:text-primary transition-colors">Sign In</a>
           <a href="/signup" className="text-muted-text hover:text-primary transition-colors">Sign Up</a>
         </div>
 
         {/* Copyright */}
-        <div className="text-center text-muted-text text-sm pt-8 border-t border-gray-200">
-          © 2025 JobFinderAI. All Rights Reserved.
+        <div className="text-center text-sm pt-8 border-t border-gray-200">
+          <p className="text-muted-text">
+            © 2025 JobFinderAI. Helping you land jobs faster.{" "}
+            <a href="/privacypolicy" target="_blank" className="text-primary hover:underline">Privacy Policy</a> |{" "}
+            <a href="/terms" target="_blank" className="text-primary hover:underline">Terms of Service</a>
+          </p>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
+
 export default Footer;
