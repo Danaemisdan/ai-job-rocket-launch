@@ -40,7 +40,7 @@ const Footer = () => {
 
         {/* Footer Links */}
         <div className="flex flex-wrap justify-center md:justify-start gap-6 mb-8 text-sm">
-          <a href="/privacy" className="text-muted-text hover:text-primary transition-colors">Privacy Policy</a>
+          <a href="/privacypolicy" className="text-muted-text hover:text-primary transition-colors">Privacy Policy</a>
           <a href="/terms" className="text-muted-text hover:text-primary transition-colors">Terms of Service</a>
           <a href="#contact" className="text-muted-text hover:text-primary transition-colors">Contact</a>
           <a href="/signin" className="text-muted-text hover:text-primary transition-colors">Sign In</a>

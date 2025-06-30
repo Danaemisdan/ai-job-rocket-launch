@@ -1,12 +1,13 @@
-
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Mail, Lock, User, ArrowRight, Eye, EyeOff } from "lucide-react";
 import Header from "@/components/landing/Header";
+import { useLocation } from "react-router-dom";
 
 const Auth = () => {
+  const location = useLocation();
   const [isSignUp, setIsSignUp] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
@@ -14,6 +15,11 @@ const Auth = () => {
     email: "",
     password: ""
   });
+
+  // Set initial state based on URL
+  useEffect(() => {
+    setIsSignUp(location.pathname === "/signup");
+  }, [location.pathname]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
@@ -152,13 +158,12 @@ const Auth = () => {
               <div className="mt-6 text-center">
                 <p className="text-muted-text">
                   {isSignUp ? "Already have an account?" : "Don't have an account?"}
-                  <button
-                    type="button"
-                    onClick={() => setIsSignUp(!isSignUp)}
+                  <a
+                    href={isSignUp ? "/signin" : "/signup"}
                     className="ml-2 text-primary font-semibold hover:underline transition-all duration-300"
                   >
                     {isSignUp ? "Sign In" : "Sign Up"}
-                  </button>
+                  </a>
                 </p>
               </div>
             </div>
@@ -169,7 +174,7 @@ const Auth = () => {
             By continuing, you agree to our{" "}
             <a href="/terms" className="text-primary hover:underline">Terms & Conditions</a>
             {" "}and{" "}
-            <a href="/privacy" className="text-primary hover:underline">Privacy Policy</a>
+            <a href="/privacypolicy" className="text-primary hover:underline">Privacy Policy</a>
           </div>
         </div>
       </div>
