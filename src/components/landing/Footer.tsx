@@ -27,13 +27,13 @@ const Footer = () => {
               support@jobfinderai.in
             </a>
             <a 
-              href="https://linkedin.com/company/jobfinderai" 
+              href="https://www.linkedin.com/company/jobfinder-ai" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center text-muted-text hover:text-primary transition-colors"
             >
               <Linkedin className="mr-2 h-4 w-4" />
-              linkedin.com/company/jobfinderai
+              linkedin.com/company/jobfinder-ai
             </a>
           </div>
         </div>
