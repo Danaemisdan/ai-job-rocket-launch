@@ -1,3 +1,4 @@
+
 import { Mail, Linkedin } from "lucide-react";
 const Footer = () => {
   return <footer className="bg-footer-bg py-12 px-4">
@@ -14,9 +15,9 @@ const Footer = () => {
 
           {/* Right Side - Contact Info */}
           <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
-            <a href="mailto:support@jobfinderai.in" className="flex items-center text-muted-text hover:text-primary transition-colors">
+            <a href="mailto:danny@thejobfinderai.com" className="flex items-center text-muted-text hover:text-primary transition-colors">
               <Mail className="mr-2 h-4 w-4" />
-              support@jobfinderai.in
+              danny@thejobfinderai.com
             </a>
             <a href="https://www.linkedin.com/company/jobfinder-ai" target="_blank" rel="noopener noreferrer" className="flex items-center text-muted-text hover:text-primary transition-colors">
               <Linkedin className="mr-2 h-4 w-4" />
