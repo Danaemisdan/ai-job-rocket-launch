@@ -27,31 +27,36 @@ const features = [
 
 const FeaturesSection = () => {
   return (
-    <section className="py-20 bg-accent px-4">
-      <div className="container mx-auto max-w-6xl">
+    <section id="features" className="py-20 px-4 relative">
+      <div className="container mx-auto max-w-6xl relative z-10">
         {/* Title */}
-        <h2 className="text-4xl md:text-5xl font-bold text-deep-black text-center mb-16">
-          Increase Your Chances of Getting Hired by <span className="text-primary">100%</span>
-        </h2>
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-shadow">
+            Increase Your Chances of Getting Hired by <span className="gradient-text">10x</span>
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Our AI-powered automation handles the tedious job application process, so you can focus on what matters most.
+          </p>
+        </div>
 
         {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
             <Card 
               key={index} 
-              className="bg-white border-none shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-scale-in"
+              className="glass-card hover:border-primary/50 transition-all duration-500 hover:scale-105 animate-scale-in group"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardContent className="p-8 text-center">
                 <div className="mb-6 flex justify-center">
-                  <div className="p-4 bg-accent rounded-full">
-                    <feature.icon className="h-8 w-8 text-primary" />
+                  <div className="p-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl backdrop-blur-sm group-hover:shadow-glow transition-all duration-300">
+                    <feature.icon className="h-8 w-8 text-primary group-hover:text-accent transition-colors duration-300" />
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold text-deep-black mb-4">
+                <h3 className="text-xl font-semibold text-foreground mb-4">
                   {feature.title}
                 </h3>
-                <p className="text-muted-text leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed">
                   {feature.description}
                 </p>
               </CardContent>
