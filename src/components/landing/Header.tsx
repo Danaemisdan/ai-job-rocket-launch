@@ -20,16 +20,13 @@ const Header = () => {
       isScrolled ? 'glass-card border-b border-border/30' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-        {/* Logo */}
-        <div className="flex items-center space-x-3">
+        {/* Logo - Just the image */}
+        <div className="flex items-center">
           <img 
             src="/lovable-uploads/74297065-04fa-42cd-b939-a8c62e422203.png" 
             alt="JobFinderAI" 
-            className="h-8 w-8"
+            className="h-10 w-10"
           />
-          <span className="text-2xl font-bold gradient-text">
-            JobFinderAI
-          </span>
         </div>
 
         {/* Navigation - Desktop */}
@@ -39,7 +36,7 @@ const Header = () => {
           <a href="#how-it-works" className="text-muted-foreground hover:text-primary transition-colors duration-300">How it Works</a>
         </nav>
 
-        {/* Right side - CTA Buttons */}
+        {/* Right side - Contact & Auth */}
         <div className="flex items-center space-x-4">
           {/* Contact Icons */}
           <div className="hidden lg:flex items-center space-x-3">
@@ -61,15 +58,13 @@ const Header = () => {
             </a>
           </div>
 
-          {/* CTA Buttons */}
+          {/* Auth Buttons */}
           <div className="hidden md:flex items-center space-x-3">
-            <Button variant="secondary" size="sm" className="glow-button hover:shadow-glow">
-              <MessageCircle className="mr-2 h-4 w-4" />
-              WhatsApp
+            <Button variant="ghost" className="text-foreground hover:text-primary" asChild>
+              <a href="/signin">Sign In</a>
             </Button>
-            <Button size="sm" className="glow-button bg-gradient-to-r from-primary to-accent hover:opacity-90 text-white">
-              <Send className="mr-2 h-4 w-4" />
-              Telegram
+            <Button className="bg-primary hover:bg-primary/90 text-white" asChild>
+              <a href="/signup">Sign Up</a>
             </Button>
           </div>
 
@@ -91,13 +86,11 @@ const Header = () => {
               <a href="#how-it-works" className="text-muted-foreground hover:text-primary transition-colors">How it Works</a>
             </nav>
             <div className="flex flex-col space-y-3 mt-4">
-              <Button variant="secondary" size="sm" className="glow-button">
-                <MessageCircle className="mr-2 h-4 w-4" />
-                Try on WhatsApp
+              <Button variant="ghost" className="text-foreground hover:text-primary w-full" asChild>
+                <a href="/signin">Sign In</a>
               </Button>
-              <Button size="sm" className="glow-button bg-gradient-to-r from-primary to-accent text-white">
-                <Send className="mr-2 h-4 w-4" />
-                Try on Telegram
+              <Button className="bg-primary hover:bg-primary/90 text-white w-full" asChild>
+                <a href="/signup">Sign Up</a>
               </Button>
             </div>
           </div>
