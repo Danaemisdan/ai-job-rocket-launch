@@ -68,6 +68,10 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				}
 			},
+			boxShadow: {
+				'glow': '0 0 30px hsl(215 89% 63% / 0.3)',
+				'card': '0 8px 32px hsl(216 47% 4% / 0.4)',
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
