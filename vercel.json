@@ -1,0 +1,10 @@
+
+{
+  "rewrites": [
+    { "source": "/privacypolicy", "destination": "/" },
+    { "source": "/terms", "destination": "/" },
+    { "source": "/signin", "destination": "/" },
+    { "source": "/signup", "destination": "/" },
+    { "source": "/auth", "destination": "/" }
+  ]
+}
