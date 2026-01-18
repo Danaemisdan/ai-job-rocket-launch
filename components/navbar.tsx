@@ -59,38 +59,42 @@ export function Navbar() {
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
-                        className="md:hidden border-b border-border/40 bg-background/95 backdrop-blur overflow-hidden"
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        transition={{ duration: 0.2 }}
+                        className="fixed inset-x-0 top-[56px] bottom-0 z-40 md:hidden bg-background/95 backdrop-blur-3xl border-t border-border/40 p-4 flex flex-col items-center justify-start gap-8 pt-12"
                     >
-                        <nav className="container flex flex-col gap-4 p-4 py-8 items-center text-center">
+                        <nav className="flex flex-col gap-6 w-full items-center text-center">
                             <Link
                                 href="#features"
-                                className="text-lg font-medium transition-colors hover:text-primary"
+                                className="text-2xl font-medium transition-colors hover:text-primary"
                                 onClick={() => setIsOpen(false)}
                             >
                                 Features
                             </Link>
                             <Link
                                 href="#testimonials"
-                                className="text-lg font-medium transition-colors hover:text-primary"
+                                className="text-2xl font-medium transition-colors hover:text-primary"
                                 onClick={() => setIsOpen(false)}
                             >
                                 Testimonials
                             </Link>
                             <Link
                                 href="#pricing"
-                                className="text-lg font-medium transition-colors hover:text-primary"
+                                className="text-2xl font-medium transition-colors hover:text-primary"
                                 onClick={() => setIsOpen(false)}
                             >
                                 Pricing
                             </Link>
-                            <div className="flex flex-col gap-3 w-full max-w-xs mt-4">
-                                <AnimatedButton href="/login" variant="secondary" className="w-full justify-center">
+
+                            <div className="w-20 h-px bg-border my-2" />
+
+                            <div className="flex flex-col gap-4 w-full max-w-xs">
+                                <AnimatedButton href="/login" variant="secondary" className="w-full justify-center h-12 text-lg">
                                     Log in
                                 </AnimatedButton>
-                                <AnimatedButton href="/login" className="w-full justify-center">
+                                <AnimatedButton href="/login" className="w-full justify-center h-12 text-lg">
                                     Get Started
                                 </AnimatedButton>
                             </div>
