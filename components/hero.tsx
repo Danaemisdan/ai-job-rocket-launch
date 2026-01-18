@@ -13,9 +13,9 @@ export function Hero() {
             <div className="absolute top-0 left-1/2 -z-10 h-[500px] w-[1000px] -translate-x-1/2 opacity-20 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary via-background to-background blur-3xl" />
 
             <div className="container flex max-w-[64rem] flex-col items-center text-center gap-4 px-4">
-                <div className="inline-flex h-7 items-center justify-center rounded-full border border-border bg-background px-4 text-sm text-muted-foreground backdrop-blur-xl shadow-sm">
+                <div className="inline-flex h-8 items-center justify-center rounded-full border border-border bg-background px-4 text-sm text-muted-foreground backdrop-blur-xl shadow-sm">
                     <span className="flex h-2 w-2 rounded-full bg-primary mr-2 animate-pulse"></span>
-                    <span className="text-xs font-medium leading-none mt-[1px]">New AI Model V2.0 Beta Released</span>
+                    <span className="text-xs font-medium">New AI Model V2.0 Beta Released</span>
                 </div>
 
                 <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground text-pretty">
