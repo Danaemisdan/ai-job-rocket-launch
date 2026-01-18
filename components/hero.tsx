@@ -39,7 +39,7 @@ export function Hero() {
                 </div>
 
                 {/* Sequential Pencil Animation Loop */}
-                <div className="mt-16 relative w-full max-w-5xl aspect-video rounded-xl border border-border/50 bg-background/50 shadow-2xl backdrop-blur-sm overflow-hidden flex items-center justify-center">
+                <div className="mt-16 relative w-full max-w-5xl min-h-[450px] md:min-h-0 md:aspect-video rounded-xl border border-border/50 bg-background/50 shadow-2xl backdrop-blur-sm overflow-hidden flex items-center justify-center">
                     <div className="absolute inset-0 bg-background/80" />
                     {/* Restored Background Grid */}
                     <div className="absolute inset-0 grid grid-cols-[repeat(20,minmax(0,1fr))] grid-rows-[repeat(10,minmax(0,1fr))] opacity-10">

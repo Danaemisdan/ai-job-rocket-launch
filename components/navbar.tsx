@@ -1,9 +1,15 @@
+"use client"
+
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { AnimatedButton } from "@/components/animated-button";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export function Navbar() {
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
         <header className="fixed top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
             <div className="container flex h-14 max-w-screen-2xl items-center justify-between mx-auto px-4 sm:px-8 relative">
@@ -23,14 +29,18 @@ export function Navbar() {
                 </div>
 
                 {/* Center: Logo (Absolute Centered) */}
-                <Link href="/" className="absolute left-1/2 -translate-x-1/2 flex items-center">
+                <Link href="/" className="absolute left-1/2 -translate-x-1/2 flex items-center z-50">
                     <span className="font-semibold text-lg tracking-tight">Jobfinder</span>
                     <span className="font-bold text-lg text-blue-600 ml-1">AI</span>
                 </Link>
 
                 {/* Mobile Menu Button */}
-                <Button className="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 py-2 mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden" variant="ghost">
-                    <Menu className="h-5 w-5" />
+                <Button
+                    className="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 py-2 mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden z-50"
+                    variant="ghost"
+                    onClick={() => setIsOpen(!isOpen)}
+                >
+                    {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
                     <span className="sr-only">Toggle Menu</span>
                 </Button>
 
@@ -44,6 +54,50 @@ export function Navbar() {
                     </AnimatedButton>
                 </nav>
             </div>
+
+            {/* Mobile Menu Overlay */}
+            <AnimatePresence>
+                {isOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        className="md:hidden border-b border-border/40 bg-background/95 backdrop-blur overflow-hidden"
+                    >
+                        <nav className="container flex flex-col gap-4 p-4 py-8 items-center text-center">
+                            <Link
+                                href="#features"
+                                className="text-lg font-medium transition-colors hover:text-primary"
+                                onClick={() => setIsOpen(false)}
+                            >
+                                Features
+                            </Link>
+                            <Link
+                                href="#testimonials"
+                                className="text-lg font-medium transition-colors hover:text-primary"
+                                onClick={() => setIsOpen(false)}
+                            >
+                                Testimonials
+                            </Link>
+                            <Link
+                                href="#pricing"
+                                className="text-lg font-medium transition-colors hover:text-primary"
+                                onClick={() => setIsOpen(false)}
+                            >
+                                Pricing
+                            </Link>
+                            <div className="flex flex-col gap-3 w-full max-w-xs mt-4">
+                                <AnimatedButton href="/login" variant="secondary" className="w-full justify-center">
+                                    Log in
+                                </AnimatedButton>
+                                <AnimatedButton href="/login" className="w-full justify-center">
+                                    Get Started
+                                </AnimatedButton>
+                            </div>
+                        </nav>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </header>
     );
 }
