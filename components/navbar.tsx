@@ -63,7 +63,7 @@ export function Navbar() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
                         transition={{ duration: 0.2 }}
-                        style={{ backgroundColor: "var(--background)" }}
+                        style={{ backgroundColor: "hsl(var(--background))" }}
                         className="fixed inset-x-0 top-[56px] bottom-0 z-[100] md:hidden border-t border-border/40 p-4 flex flex-col items-center justify-start gap-8 pt-12"
                     >
                         <nav className="flex flex-col gap-6 w-full items-center text-center">
