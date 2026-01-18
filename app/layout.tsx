@@ -11,11 +11,6 @@ export const metadata: Metadata = {
     default: "JobFinder AI - The #1 AI Job Search Engine & Application Automator",
     template: "%s | JobFinder AI"
   },
-  icons: {
-    icon: "/icon.svg",
-    shortcut: "/icon.svg",
-    apple: "/icon.svg",
-  },
   description: "Find jobs 10x faster with the world's most advanced AI Job Search Agent. Automate applications, optimize resumes with LLMs, and land UI/UX, Engineering, and Tech roles instantly.",
   keywords: ["Jobs", "Job Search", "AI Job Finder", "Automated Job Application", "UI Jobs", "Remote Jobs", "Software Engineer Jobs", "Resume Builder AI", "Find Jobs Near Me"],
   authors: [{ name: "JobFinder AI Team" }],
