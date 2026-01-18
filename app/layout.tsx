@@ -39,6 +39,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  metadataBase: new URL('https://jobfinder.ai'),
 };
 
 export default function RootLayout({
