@@ -15,7 +15,7 @@ export function Hero() {
             <div className="container flex max-w-[64rem] flex-col items-center text-center gap-4 px-4">
                 <div className="inline-flex items-center justify-center rounded-full border border-border bg-background px-4 py-1.5 text-sm text-muted-foreground backdrop-blur-xl shadow-sm">
                     <span className="flex h-2 w-2 rounded-full bg-primary mr-2 animate-pulse"></span>
-                    <span className="text-xs font-medium leading-none pt-[1px]">New AI Model V2.0 Released</span>
+                    <span className="text-xs font-medium leading-none">New AI Model V2.0 Beta Released</span>
                 </div>
 
                 <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground text-pretty">
