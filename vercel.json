@@ -1,10 +1,5 @@
-
 {
-  "rewrites": [
-    { "source": "/privacypolicy", "destination": "/" },
-    { "source": "/terms", "destination": "/" },
-    { "source": "/signin", "destination": "/" },
-    { "source": "/signup", "destination": "/" },
-    { "source": "/auth", "destination": "/" }
-  ]
+  "framework": "nextjs",
+  "buildCommand": "next build",
+  "installCommand": "npm install"
 }
