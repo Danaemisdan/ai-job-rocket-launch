@@ -117,3 +117,26 @@ nextjs-portal,
 body>[data-nextjs-toast] {
   display: none !important;
 }
+
+/* MOBILE MENU - Force opaque background */
+[data-mobile-menu] {
+  background-color: #ffffff !important;
+}
+
+.dark [data-mobile-menu],
+:where(.dark, .dark *) [data-mobile-menu] {
+  background-color: #000000 !important;
+}
+
+/* HERO BADGE - Force vertical centering */
+[data-hero-badge] {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+}
+
+[data-hero-badge] span {
+  display: inline-flex !important;
+  align-items: center !important;
+}
