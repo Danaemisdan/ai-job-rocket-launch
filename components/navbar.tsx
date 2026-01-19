@@ -98,6 +98,7 @@ export function Navbar() {
                                     Get Started
                                 </AnimatedButton>
                             </div>
+                            <div className="mt-8 text-xs text-muted-foreground opacity-50">v2.5 (Beta)</div>
                         </nav>
                     </motion.div>
                 )}

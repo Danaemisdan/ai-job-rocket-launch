@@ -9,7 +9,6 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { cn } from "@/lib/utils"
-import { BrandLogo } from "@/components/ui/logo"
 
 const SECRET_CODE = "WWMN-0921-T4Y7-0I8O"
 
@@ -50,7 +49,10 @@ export default function BetaAccessPage() {
                 className="w-full max-w-md relative z-10"
             >
                 <div className="text-center mb-8 space-y-2 flex flex-col items-center">
-                    <BrandLogo className="w-16 h-16 mb-4 shadow-lg shadow-blue-500/20 rounded-full" />
+                    <div className="flex items-center justify-center mb-6 scale-125">
+                        <span className="font-semibold text-3xl tracking-tight text-white">Jobfinder</span>
+                        <span className="font-bold text-3xl text-blue-500 ml-1">AI</span>
+                    </div>
 
                     <div className="px-2 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-[10px] font-bold text-blue-400 uppercase tracking-wider mb-2">
                         Beta Access

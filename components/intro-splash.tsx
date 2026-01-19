@@ -119,6 +119,7 @@ export function IntroSplash({ children }: { children: React.ReactNode }) {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: phase === "done" || !showSplash ? 1 : 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
+                style={{ display: phase === "done" || !showSplash ? "contents" : "block" }}
             >
                 {children}
             </motion.div>
