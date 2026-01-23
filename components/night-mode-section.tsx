@@ -56,7 +56,7 @@ export function NightModeSection() {
     return (
         <section ref={containerRef} className="relative h-[150vh] z-20">
             {/* Sticky Container */}
-            <div className="sticky top-0 h-screen flex flex-col items-center justify-center overflow-hidden">
+            <div className="sticky top-0 h-screen flex flex-col items-center justify-center overflow-visible">
 
                 {/* Dark Background Overlay */}
                 <motion.div
