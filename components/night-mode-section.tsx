@@ -65,7 +65,7 @@ export function NightModeSection() {
                 />
 
                 {/* Content */}
-                <div className="relative z-10 w-full max-w-5xl px-4 flex flex-col items-center text-center">
+                <div className="relative z-10 w-full max-w-5xl px-4 pb-24 flex flex-col items-center text-center">
 
                     {/* Moon & Stars Graphic */}
                     <div className="w-full h-64 md:h-96 relative flex items-center justify-center mb-8">
