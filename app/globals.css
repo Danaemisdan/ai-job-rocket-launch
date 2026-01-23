@@ -118,14 +118,18 @@ body>[data-nextjs-toast] {
   display: none !important;
 }
 
-/* MOBILE MENU - Force opaque background */
+/* MOBILE MENU - Force opaque background with blur */
 [data-mobile-menu] {
-  background-color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(40px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(40px) saturate(180%) !important;
 }
 
 .dark [data-mobile-menu],
 :where(.dark, .dark *) [data-mobile-menu] {
-  background-color: #000000 !important;
+  background-color: rgba(0, 0, 0, 0.98) !important;
+  backdrop-filter: blur(40px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(40px) saturate(180%) !important;
 }
 
 /* HERO BADGE - Force vertical centering */
